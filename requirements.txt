@@ -1,2 +1,8 @@
 selenium
 pynput
+h5py
+numpy
+Pillow
+tqdm
+scikit-learn
+tensorflow
