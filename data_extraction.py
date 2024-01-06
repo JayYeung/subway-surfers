@@ -14,20 +14,23 @@ driver.switch_to.window(driver.window_handles[0])
 driver.close()
 driver.switch_to.window(driver.window_handles[0])
 
-RUN_NUMBER = 0
+RUN_NUMBER = 1
 round_start_time = datetime.datetime.now()
 last_action_time = datetime.datetime.now()
 screenshots_taken = []
-lock = threading.Lock()
+last_screenshot_was_nothing = False  
 
 def take_screenshot(action='nothing'):
-    global RUN_NUMBER, round_start_time, screenshots_taken
+    global RUN_NUMBER, round_start_time, screenshots_taken, last_screenshot_was_nothing
+    if action == 'nothing' and last_screenshot_was_nothing:
+        return
     time_elapsed = (datetime.datetime.now() - round_start_time).seconds
     naming_convention = f'{RUN_NUMBER}_{time_elapsed}_{action}'
     screenshot_filename = f'{path}/{naming_convention}.png'
     driver.save_screenshot(screenshot_filename)
     screenshots_taken.append(screenshot_filename)
     print(f"Screenshot saved as {naming_convention}.png")
+    last_screenshot_was_nothing = (action == 'nothing')
 
 def check_inactivity():
     global last_action_time
