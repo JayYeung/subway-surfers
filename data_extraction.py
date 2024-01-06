@@ -52,7 +52,7 @@ def on_press(key):
             return False
 
         elif key == keyboard.Key.space:
-            # Delete the last 3 screenshots of the current run
+            # delete mistakes that caused you to die. 
             for _ in range(3):
                 if screenshots_taken:
                     last_screenshot = screenshots_taken.pop()
