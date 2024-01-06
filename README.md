@@ -14,5 +14,6 @@
 
 -   Play Subway Surfers in the opened browser window.
 -   The script captures screenshots on arrow key actions and after 1 second of inactivity.
+-   Press **Up, Down, Left, Right** arrow keys to move.
 -   Press **Spacebar** to start a new data collection round.
 -   Press **Escape** to stop the script.
