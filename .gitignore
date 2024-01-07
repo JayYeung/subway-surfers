@@ -1,4 +1,6 @@
 __pycache__/
 data/*
-!data/0_28_up.png
+!data/1_3_up.png
+datav2/*
+!datav2/1_5_up.png
 .DS_Store
