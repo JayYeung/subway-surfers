@@ -15,8 +15,6 @@ driver = start()
 
 latency = datetime.now()
 
-# sleep(60)
-
 try:
     actions = ActionChains(driver)
 

@@ -1,7 +1,7 @@
 __pycache__/
-data/*
-!data/1_3_up.png
-datav2/*
-!datav2/1_5_up.png
+old_data_files/data/*
+!old_data_files/data/1_3_up.png
+old_data_files/datav2/*
+!old_data_files/datav2/1_5_up.png
 .DS_Store
 computer_vision/image_data_with_labels.h5
