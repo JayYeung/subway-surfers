@@ -30,7 +30,7 @@ start = datetime.now()
 while True: 
     img = ImageGrab.grab(bbox=(X, Y, BOTTOM_X, BOTTOM_Y))
     print('Screenshot latency (seconds):', (datetime.now() - start).total_seconds())
-    # img.save('current_frame.png')
+    img.save('current_frame.png')
 
     start = datetime.now()
     
